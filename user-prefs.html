@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class="bg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>User Preferences</title>
+</head>
+
+<body onload="onInit()" class="bg">
+    <div class="header">
+        <h1 class="bg">Find your way back to your BEST places</h1>
+    </div>
+    <h2 class="bg">I invite you to choose your <span>Preferences</span> for our web </h2>
+    <main>
+        <section class="pref-container bg">
+            <button class="btn main bg" onclick="onMoveToPage('index.html')">Back to Main</button>
+            <!-- <form class="form bg" action="">
+
+                Select color for text
+                <input type="color" id="color" name="color" form="frmRegister" value="#ffffff"
+                    onchange="saveUserPref('textColor',this.value)">
+                Select color for background
+                <input type="color" id="color" name="color" form="frmRegister" value="#82a47f"
+                    onchange="saveUserPref('bgColor',this.value)">
+                Submit Your Birthday time and Date
+                <label for="appt"></label>
+                <input type="time" id="appt" name="appt" onchange="saveUserPref('timeOfBirth',this.value)">
+                <label for="dob"></label>
+                <input type="date" id="dob" name="dob" onchange="saveUserPref('dateOfBirth',this.value)">
+            </form> -->
+
+            <form id="frmRegister">
+                <table>
+
+                    <tr>
+                        <td><label for="color">Text Color</label></td>
+                        <td><input type="color" id="color" name="color" form="frmRegister" value="#ffffff"
+                                onchange="saveUserPref('textColor',this.value)"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="color">Background Color</label></td>
+                        <td><input type="color" id="color" name="color" form="frmRegister" value="#82a47f"
+                                onchange="saveUserPref('bgColor',this.value)"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail:</label></td>
+                        <td><input type="email" name="email" id="email" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Age:</label></td>
+                        <td><input type="range" id="age" name="age" min="18" max="120" value="26"
+                                onchange="showAge(this.value);" />
+                            <span id="sAge">26</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="appt">Birthday time</label></td>
+                        <td><input type="time" id="appt" name="appt" onchange="saveUserPref('timeOfBirth',this.value)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="dob"></label>Date</td>
+                        <td> <input type="date" id="dob" name="dob" onchange="saveUserPref('dateOfBirth',this.value)">
+                        </td>
+                    </tr>
+
+                </table>
+                <button class="default" onclick="saveUserPref()">Save</button>
+                <button class="default" onclick="resetToDefault()">Back to Default</button>
+
+                <!-- <input type="submit" value="Register" />
+                <button>Register</button>
+                <input type="submit" formnovalidate value="Save" /> -->
+            </form>
+            <!-- <button class="default" onclick="resetToDefault()">default</button> -->
+            <button class="btn map bg" onclick="onMoveToPage('map.html')">Go to Map</button>
+
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/services/utilService.js"></script>
+    <script src="js/services/storageService.js"></script>
+    <script src="js/services/userPrefService.js"></script>
+    <script src="js/services/placeService.js"></script>
+</body>
+
+</html>
